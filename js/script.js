@@ -12,6 +12,7 @@ snake[0] = {
 };
 let direction = "right";
 let food = {
+    // retorna num aleatório [0,1[ para cada posição
     x: Math.floor(Math.random() * 15 + 1) * box,
     y: Math.floor(Math.random() * 15 + 1) * box
 };
@@ -77,14 +78,20 @@ function iniciarJogo() {
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
     
-    if(direction == "right") snakeX += box;
-    if(direction == "left") snakeX -= box;
-    if(direction == "up") snakeY -= box;
-    if(direction == "down") snakeY += box;
+    if (direction == "right") snakeX += box;
+    if (direction == "left") snakeX -= box;
+    if (direction == "up") snakeY -= box;
+    if (direction == "down") snakeY += box;
     
-    snake.pop();
+    if (snakeX != food.x || snakeY != food.y) {
+        // tira o último elemento da lista
+        snake.pop();
+    } else {
+        food.x = Math.floor(Math.random() * 15 + 1) * box;
+        food.y = Math.floor(Math.random() * 15 + 1) * box;
+    }
     
-    // unshift() para inseria a cabeça
+    // unshift() para inserir  a cabeça
     let newHead = {
         x: snakeX,
         y: snakeY
