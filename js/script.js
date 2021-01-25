@@ -70,6 +70,17 @@ function iniciarJogo() {
     if (snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
     
     
+    // Verificando se a cabeça da cobra se choca com o corpo
+    // Veja que o Loop começa a partir da 1ª pos do corpo
+    for (i = 1; i < snake.length; i++) {
+        
+        if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
+            clearInterval(jogo);
+            alert('Game Over!!! :(');
+        }
+    }
+    
+    
     criarBG();
     criarCobrinha();
     drawFood();
