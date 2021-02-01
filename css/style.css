@@ -1,11 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    height: 95vh;
+    /*height: 95vh;
     width: 95vh;
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;*/
     
-    color: rgb(44, 139, 44);
+    
+    color: #92751f;
+    background: black;
 }
+
+
+
+
+header, section {
+    margin: 15px 30px 50px 100px;
+    
+}
+#artigo {
+    margin: 15px 30px 0 100px;
+}
+
+header {
+    text-align: center;
+    padding-top: 40px;
+}
+header h1 {
+    color: #baef7cbf; /*#baef7c;rgb(44, 139, 44);*/
+    background: linear-gradient(rgb(20, 40, 20), black, rgb(20, 40, 20));
+    font-size: 70px;
+    margin-bottom: 10px;
+    width: 96%;
+    border-radius: 20px;
+}
+header p {
+    font-size: 24px;
+}
+
+
+nav {
+    padding: 40px;
+    margin-bottom: 50px;
+}
+nav, footer {
+    background: #baef7cc2;/*#baef7c;#8bc34a;*/
+}
+
+nav .nav-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+nav .nav-container {
+    justify-content: space-around;
+}
+
+
+nav p {
+    color: black;
+    font-size: 16px;
+}
+nav a {
+    font-size: 20px;
+}
+nav ul {
+    display: flex;
+}
+nav li {
+    margin-left: 20px;
+    list-style: none;
+}
+nav a {
+    color: #755555;/*#655938;#a7841e;*/
+    text-decoration: none;
+}
+nav a:hover {
+    color: #888359;
+    font-size: 22px;
+}
+
+
+
+section {
+    background: #2a2b1a0f; /*#baef7c08;*/
+    border-radius: 5px;
+}
+section h2 {
+    font-size: 30px;
+}
+section p {
+    text-align: justify;
+    width: 75%;
+}
+
+
+footer {
+    padding: 40px 20px 30px 20px;
+}
+
+footer p {
+    margin-left: 80px;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+
+
+#artigo .container, #artigo-cont .container {
+    align-items: center;
+}
+
+#artigo .container {
+    height: 300px;
+}
+#artigo-cont .container {
+    height: 850px;
+}
+
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 20px;
+}
+
+.game-container canvas {
+    margin-left: 80px;
+    border: 5px solid;
+    border-radius: 5px;
+}
+
+
+
+
+#artigo-cont img {
+    width: 250px;
+    height: 200px;
+}
+
+#artigo-cont .img-small img {
+    width: 180px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+
+/*
+#artigo-cont .container {
+    background-image: url("../images/jogo da cobrinha_original.png");
+    background-repeat: no-repeat;
+}*/
+
+
+
